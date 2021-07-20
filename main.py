@@ -24,5 +24,13 @@ async def on_message(message):
         else:
             await message.channel.send(embed=Embed(color=Color.red(), description="not valid"))
 
+@client.event
+async def on_ready():
+    print("Bot is online. Running on servers:")
+    for s in client.guilds:
+        print(" - %s (%s)" % (s.name, s.id))
+    await client.change_presence(activity=Game(name="[~]"))
+
+
 
 client.run(SECRETS.TOKEN)
