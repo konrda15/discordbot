@@ -5,6 +5,7 @@ import SECRETS
 import discord
 from discord import Game, Embed, Color
 from randomevents import eventselector
+from regularevents import updateloop
 
 client = discord.Client()
 
@@ -28,6 +29,9 @@ async def on_message(message):
 
 @client.event
 async def on_ready():
+    loop = asyncio.get_event_loop()
+    loop.create_task(updateloop(client))
+
     print("Bot is online. Running on servers:")
     for s in client.guilds:
         print(" - %s (%s)" % (s.name, s.id))
