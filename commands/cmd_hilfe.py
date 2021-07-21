@@ -1,7 +1,7 @@
 import discord
 
 
-async def ex(args, message, client, invoke):
+async def ex(args, message):
     output = "**~hilfe** - Liste aller Befehle\n" + \
              "**~sag [x]** - postet x\n" + \
              "**~choice [x1, x2 ... xn]<** - wählt eine der n Optionen\n" + \
