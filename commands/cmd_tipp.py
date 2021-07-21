@@ -18,10 +18,7 @@ async def ex(args, message):
             if sum2 >= key:
                 print(result)
                 break
-    output = ""
-    for s in args:
-        output += s
-        output += " "
+    output = ' '.join(args)
     output += "\n"
     output += result
     await message.channel.send(output)

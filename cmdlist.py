@@ -1,4 +1,4 @@
-from commands import cmd_sag, cmd_choice, cmd_janein, cmd_rand, cmd_tipp, cmd_warn
+from commands import cmd_sag, cmd_choice, cmd_janein, cmd_rand, cmd_tipp, cmd_warn, cmd_rate, cmd_react
 
 cmd = {
     "sag": cmd_sag,
@@ -7,6 +7,8 @@ cmd = {
     "rand": cmd_rand,
     "tipp": cmd_tipp,
     "warn": cmd_warn,
+    "rate": cmd_rate,
+    "react": cmd_react,
 }
 
 

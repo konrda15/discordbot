@@ -4,6 +4,7 @@ import asyncio
 import SECRETS
 import discord
 from discord import Game, Embed, Color
+from randomevents import eventselector
 
 client = discord.Client()
 
@@ -12,6 +13,7 @@ client = discord.Client()
 async def on_message(message):
     if message.author == client.user:
         return
+    await eventselector(message)
 
     if message.content.startswith('~'):
         invoke = message.content[len('~'):].split(" ")[0]
