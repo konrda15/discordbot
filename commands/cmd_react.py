@@ -3,6 +3,8 @@ import random
 
 async def ex(args, message):
     emojis = await message.guild.fetch_emojis()
+    if(len(emojis) <= 1):
+        return
     index = random.randint(0, len(emojis) - 1)
 
     await message.add_reaction(emojis[index])

@@ -45,6 +45,6 @@ async def ex(args, message):
     embed.set_footer(text=(dateTimeObj.strftime("%d.%m.%Y, %H:%M:%S")))
 
     for channel in server.channels:
-        if channel.name == "mod-logs": #hardcoded value
+        if channel.name == "moderatoren-logbuch": #hardcoded value
             await channel.send(embed=embed)
 

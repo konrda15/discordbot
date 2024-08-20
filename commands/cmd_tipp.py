@@ -3,7 +3,7 @@ import random
 
 
 async def ex(args, message):
-    with open("/commands/data/results.csv", 'r', encoding="utf-8-sig") as csv_file:
+    with open("commands/data/results.csv", 'r', encoding="utf-8-sig") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         sum1 = 294970
         sum2 = 0
